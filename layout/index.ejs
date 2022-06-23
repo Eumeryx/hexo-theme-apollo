@@ -1,0 +1,14 @@
+<div class="index home">
+  <% for (const post of page.posts.data) { %>
+    <div class="post-list-item">
+      <article class="post-block">
+        <h2 class="post-title">
+          <%- link_to(post.path, post.title, {class: 'post-title-link'})  %>
+        </h2>
+        <div class="post-info"><%= full_date(post.date, config.date_format) %></div>
+        <div class="post-content"><%- post.excerpt %></div>
+        <%- link_to(post.path, '...more', {class: 'read-more'}) %>
+      </article>
+    </div>
+  <% } %>
+</div>

@@ -1,0 +1,60 @@
+main.container {
+    margin: 2em 10px;
+}
+
+@media screen and (max-width: $wrap-width) {
+    .wrap {
+        width: 100%;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    main.container,
+    .home.post-list,
+    .archive {
+        margin-top: 0;
+    }
+
+    .archive .post-item {
+        padding-left: 20px;
+    }
+
+    .post-toc ol {
+        padding-left: 2em;
+    }
+}
+
+@media screen and (min-width: $wrap-width) {
+    .wrap {
+        width: $wrap-width;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 20px 100px;
+    }
+}
+
+@media screen and (min-width: $wrap-width + $toc-width) {
+    .wrap {
+        margin: 0;
+    }
+
+    .post-toc {
+        position: fixed;
+        top: 4rem;
+        margin-left: $wrap-width;
+    }
+
+    .post-toc ol {
+        padding-left: 1em;
+    }
+}
+
+@media screen and (min-width: $wrap-width + $toc-width * 2) {
+    .wrap {
+        margin: 0 auto;
+    }
+}

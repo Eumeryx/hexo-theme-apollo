@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+$wrap-width: 850px !default;
+$toc-width: 150px !default;
+$primary_color: #db3333 !default;
+$hover_color: #267B54 !default;
+
+@import "_partial/normalize";
+@import "_partial/base";
+@import "_partial/header";
+@import "_partial/index-list";
+@import "_partial/post";
+@import "_partial/toc";
+@import "_partial/footer";
+@import "_partial/mq";
+@import "_partial/prism";
+
+@font-face {
+    font-family: 'sourcesanspro';
+    src: url('./fonts/sourcesanspro.woff2') format('woff2'),
+         url('./fonts/sourcesanspro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

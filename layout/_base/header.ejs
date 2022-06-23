@@ -1,0 +1,12 @@
+<header>
+  <a class="logo-link" href="<%= url_for() %>">
+    <img src="<%= url_for(theme.logo) %>" alt="logo">
+  </a>
+  <ul class="nav nav-list">
+    <% for (const {name, url} of theme.menu) { %>
+      <li class="nav-list-item">
+        <%- link_to(url, name.toUpperCase(), {class: `nav-list-link${is_current(url) ? ' active' : ''}`}) %>
+      </li>
+    <% } %>
+  </ul>
+</header>

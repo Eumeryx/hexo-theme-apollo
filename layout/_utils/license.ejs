@@ -1,0 +1,21 @@
+<% const license = page.license !== false ? page.license || theme.license : '' %>
+<% 
+if (/^\s*cc-/i.test(license)) {
+  let item = 'by';
+  for (const reg of [/-nc/i, /-nd|-sa/i]) {
+    item += reg.exec(license) || '';
+  }
+  const url = `https://creativecommons.org/licenses/${item}/4.0/`;
+  item = item.replace(/(by|nc|nd|sa)/g, (key) => 
+    ({by: '', nc: 'NonCommercial', nd: 'NoDerivatives', sa: 'ShareAlike'})[key]
+  );
+%>
+  <blockquote class="tip">
+    <p><%- 
+      link_to(url, 'Creative Commons License', {external: true})
+    %></p>
+    <p>This work is licensed under a <%-
+      link_to(url, `Creative Commons Attribution${item} 4.0 International License`, {external: true})
+    %>.</p>
+  </blockquote>
+<% } %>

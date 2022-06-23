@@ -1,0 +1,13 @@
+<div class="index section">
+  <% (function nestedSection(map) { %>
+    <ul>
+    <% for (const [key, subMap] of map.entries()) { %>
+      <li>
+        <% const {href, size} = subMap %>
+        <%- href ? link_to(href, key, {class: 'section-link'}) : `<a>${key}</a>` %>
+        <%- size ? nestedSection(subMap) : '' %>
+      </li>
+    <% } %>
+    </ul>
+  <% })(page.sectionMap) %>
+</div>

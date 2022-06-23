@@ -1,0 +1,35 @@
+header {
+    min-height: 60px;
+
+    .logo-link {
+        float: left;
+    }
+
+    .nav {
+        float: right;
+        left: 80px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-link img {
+        height: 60px;
+    }
+
+    .nav-list-link.active,
+    .nav-list-link:hover {
+        border-bottom: 1px solid $primary_color;
+    }
+
+    .nav-list-item {
+        padding: 19px 10px;
+
+        a {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+}

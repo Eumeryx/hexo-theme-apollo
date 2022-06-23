@@ -1,0 +1,34 @@
+menu:
+  - name: Blog
+    url: /
+  - name: Archive
+    url: /archives/
+  - name: Tag
+    url: /tags/
+  - name: Section
+    url: /sections/
+  - name: Rss
+    url: /atom.xml
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# scss to css
+sass:
+    outputStyle: compressed # `expanded` or `compressed`
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Analytics
+# google-analytics:
+# ga: UA-xxxxxxxx-x
+
+# Copyright Infomation
+startyear: 2015
+
+# Post license
+# e.g cc-by-nc-sa-4.0
+license: cc-by-nc-sa-4.0

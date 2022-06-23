@@ -1,0 +1,27 @@
+.post-toc {
+    #toc {
+        margin-top: 0;
+        overflow-wrap: normal;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        ol {
+            margin: 0;
+        }
+
+        ol li::marker {
+            content: "⊹ ";
+            color: #34495e;
+        }
+
+        ol li ol li::marker {
+            content: "⋄ ";
+        }
+
+        ol li ol li ol li::marker {
+            content: "• ";
+        }
+    }
+}

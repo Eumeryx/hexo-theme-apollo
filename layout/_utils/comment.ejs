@@ -1,0 +1,27 @@
+<% if (page.comment !== false && (page.comment || theme.comment) == 'waline') { %>
+  <script>{
+    const commemt_starts = () => {
+      const waline_url = '<%- theme.waline.client || "https://unpkg.com/@waline/client@v2/dist/waline.js" %>';
+
+      const style = document.createElement('link');
+      style.rel = 'stylesheet';
+      style.href = waline_url.replace(/\/[^/]+?\.js$/, '/waline.css');
+      document.head.appendChild(style);
+
+      import(waline_url).then(({init = window.Waline.init}) => init(
+        <%- JSON.stringify({el: '#comment', serverURL: theme.waline.serverURL, ...theme.waline.options}) %>
+      ));
+    };
+
+    <% if (theme.comment_auto_load) { %>
+      commemt_starts();
+    <% } else { %>
+      const comment_button = document.getElementById('comment-button');
+      comment_button.addEventListener('click', commemt_starts, {once: true});
+
+      fetch('<%- `${theme.waline.serverURL}/comment?type=count&url=` %>' + window.location.pathname)
+        .then(res => res.json())
+        .then(count => comment_button.innerHTML += `(${count})`);
+    <% } %>
+  }</script>
+<% } %>

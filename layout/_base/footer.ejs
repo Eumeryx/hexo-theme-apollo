@@ -1,0 +1,17 @@
+<footer>
+  <%- include('../_utils/paginator') %>
+  <div id="comment"></div>
+  <div class="copyright">
+    <p><%- fragment_cache('copyright', () => {
+      const year = date(Date.now(), 'YYYY'), {startyear} = theme;
+      return `© ${
+          year == startyear ? year : `${startyear} - ${year}`
+        } ${config.author}, powered by ${
+          link_to('https://hexo.io/', 'Hexo', {external: true})
+        } and ${
+          link_to('https://github.com/Eumeryx/hexo-theme-apollo', 'Apollo++', {external: true})
+        }.`;
+    }) %></p>
+  </div>
+  <a class="back-top" href="#">⋀</a>
+</footer>

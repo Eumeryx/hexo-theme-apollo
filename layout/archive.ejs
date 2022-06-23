@@ -1,0 +1,13 @@
+<div class="index list">
+  <% let year = '' %>
+  <% for (const post of page.posts.data) {
+    const thisYear = date(post.date, 'YYYY'); %>
+    <% if(year !== thisYear) { %>
+      <h2 class="archive-year"><%- year = thisYear%></h2>
+    <% } %>
+    <div class="post-item">
+      <div class="post-info"><%= full_date(post.date, config.date_format) %></div>
+      <%- link_to(post.path, post.title, {class: 'post-title-link'}) %>
+    </div>
+  <% } %>
+</div>

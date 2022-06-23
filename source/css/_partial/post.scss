@@ -1,0 +1,143 @@
+.post {
+    padding-top: 1em;
+}
+
+.post-block {
+    .post-title {
+        margin: 0.65em 0;
+        color: #2c3e50;
+        font-size: 1.5em;
+    }
+
+    .post-info {
+        color: #7f8c8d;
+        margin: 1.2em 0;
+
+        span {
+            margin-left: 0.5rem;
+        }
+
+        a.post-from {
+            margin-left: 0.5rem;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: white;
+            background-color: #E36B6B;
+        }
+    }
+}
+
+.post-content {
+    word-break: keep-all;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        font-size: 22px;
+        margin: 1em 0em 1em 1em;
+
+        &[id]:before {
+            content: "⊹";
+            color: $primary_color;
+            position: absolute;
+            left: -1em;
+            font-size: 1em;
+            font-weight: lighter;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+
+        &[id]:before {
+            content: "⋄";
+            left: -.8em;
+        }
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 18px;
+
+        &[id]:before {
+            content: "•";
+            left: -.5em;
+        }
+    }
+
+    a {
+        color: $primary_color;
+        word-break: keep-all;
+
+        &:hover {
+            color: $hover_color;
+        }
+    }
+
+    blockquote {
+        margin: 2em 0;
+        padding-left: 20px;
+        border-left: 1px solid $primary_color;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 1em auto;
+    }
+
+    &>table,
+    &>figure.highlight {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
+    }
+
+    .tip {
+        position: relative;
+        margin: 2em 0;
+        padding: 12px 24px 12px 30px;
+        border-left: 4px solid #f66;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-color: #f8f8f8;
+
+        br {
+            display: none;
+        }
+    }
+
+    .tip:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        content: "!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #f66;
+        font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    }
+}
+
+#mask {
+    position: fixed;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    #mask-image {
+        max-width: 95%;
+    }
+}

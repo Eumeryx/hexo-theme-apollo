@@ -1,0 +1,11 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%=
+    page.description || (is_post() ? '' : config.description)
+  %>">
+  <title><%= (page.title ? page.title + ' · ' : '') + config.title %></title>
+  <%- favicon_tag(theme.favicon) %>
+  <%- css('css/apollo.css') %>
+</head>

@@ -1,0 +1,8 @@
+<% if (page.toc) { %>
+  <aside class="post-toc">
+    <div id="toc">
+      <h2><%= theme.toc_title || 'Contents' %></h2>
+      <%- toc(page.content, {list_number: false, max_depth: 4, min_depth: 2}) %>
+    </div>
+  </aside>
+<% } %>

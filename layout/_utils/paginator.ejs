@@ -1,0 +1,14 @@
+<% if (is_post()) { %>
+  <% const {prev, next} = page %>
+  <div class="paginator">
+    <%- prev && link_to(prev.path, 'PREV', {class: 'button', title: prev.title}) %>
+    <% if (!theme.comment_auto_load) { %>
+      <a class="button" id="comment-button">COMMENT</a>
+    <% } %>
+    <%- next && link_to(next.path, 'NEXT', {class: 'button', title: next.title}) %>
+  </div>
+<% } else if (page.total > 1) { %>
+  <div class="paginator">
+    <%- paginator({prev_next: false, ...page}) %>
+  </div>
+<% } %>
