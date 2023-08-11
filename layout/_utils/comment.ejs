@@ -5,7 +5,7 @@
 
       const style = document.createElement('link');
       style.rel = 'stylesheet';
-      style.href = waline_url.replace(/\/[^/]+?\.js$/, '/waline.css');
+      style.href = waline_url.replace(/\/[^/]+?\.m?js$/, '/waline.css');
       document.head.appendChild(style);
 
       import(waline_url).then(({init = window.Waline.init}) => init(

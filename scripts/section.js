@@ -1,5 +1,7 @@
 'use strict';
 
+if (hexo.config.theme_config.enableSection === false) return;
+
 const pagination = require('hexo-pagination');
 
 const config = {

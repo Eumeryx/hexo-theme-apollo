@@ -5,8 +5,8 @@ menu:
     url: /archives/
   - name: Tag
     url: /tags/
-  - name: Section
-    url: /sections/
+#  - name: Section
+#    url: /sections/
   - name: Rss
     url: /atom.xml
 
@@ -16,15 +16,6 @@ logo: /favicon.png
 # scss to css
 sass:
     outputStyle: compressed # `expanded` or `compressed`
-
-# Comment
-# e.g disqus: seansun
-disqus:
-duoshuo:
-
-# Analytics
-# google-analytics:
-# ga: UA-xxxxxxxx-x
 
 # Copyright Infomation
 startyear: 2015

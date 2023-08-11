@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/pinggod/hexo-theme-apollo#readme",
   "dependencies": {
-    "hexo-pagination": "^2.0.0",
-    "sass": "^1.52.1"
+    "hexo-pagination": "^3.0.0",
+    "sass": "^1.64.2"
   }
 }
